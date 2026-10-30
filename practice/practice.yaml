@@ -11,33 +11,33 @@
 # - Put times in quotes in 24 hour format, for example "08:00" or "18:30".
 # - Never leave TODO or TBC in this file. The check will stop the build.
 #
-# THIS EXAMPLE IS A FICTIONAL PRACTICE. Every name, address and phone number
-# below is made up. Phone numbers use the 01632 960xxx range, which Ofcom
-# reserves for fiction.
+# THIS IS A FICTIONAL PRACTICE, USED TO DEMONSTRATE THE SETUP PROCESS. Every
+# name, address and phone number below is made up. Phone numbers use the
+# 01632 960xxx range, which Ofcom reserves for fiction.
 
 # Shows a "Demo" banner and stops search engines indexing the site.
 # Set to false (or delete this line) for a real practice.
 demo: true
 
 practice:
-  name: Fernmoor Medical Practice
+  name: Quillbrook Surgery
   # Optional second line for long names, and a short descriptor.
   name_split: ""
   descriptor: ""
   # Your ODS code (sometimes called the practice code). One letter, five digits.
-  ods_code: Z00001
+  ods_code: Z00002
   # england or wales. This changes the urgent care, complaints and
   # regulator information shown on the site.
   nation: england
   description: >-
-    Fernmoor Medical Practice is an NHS GP surgery caring for around 9,800
-    patients in Exampleton and the surrounding villages.
-  pcn: Fernmoor and Millbrook Primary Care Network
+    Quillbrook Surgery is an NHS GP surgery caring for around 6,200 patients in
+    Quillbrook and the nearby village of Hatherby Cross.
+  pcn: Quillbrook and Hatherby Primary Care Network
   icb: NHS Exampleshire Integrated Care Board
 
 site:
   # The full web address of the site once it is live.
-  url: https://pacharanero.github.io/open-gp-practice-website/
+  url: https://bawmedical.github.io/open-gp-practice-website/
   # If you use your own domain name with GitHub Pages, put it here, for
   # example www.your-practice.example. Leave blank otherwise.
   custom_domain: ""
@@ -45,68 +45,55 @@ site:
   # the standard NHS logo with your practice name.
   logo: ""
   # The date someone at the practice last checked the whole site was correct.
-  content_last_reviewed: "2026-10-28"
+  content_last_reviewed: "2026-10-30"
 
 contact:
-  phone: "01632 960000"
-  phone_hours: 8am to 6:30pm, Monday to Friday
+  phone: "01632 960482"
+  phone_hours: 8am to 6pm, Monday to Friday
   # Optional. Leave blank if you do not want patients to email you.
-  email: reception@fernmoor.example
+  email: reception@quillbrook.example
   email_note: >-
     Do not use email for urgent problems or to ask for medical advice. Use our
     online form or call us instead.
 
 sites:
-  - name: Fernmoor Medical Practice (main surgery)
+  - name: Quillbrook Surgery
     address:
-      - 1 Moor Lane
-      - Exampleton
+      - 14 Kestrel Row
+      - Quillbrook
       - Exampleshire
-    postcode: ZZ1 1AA
-    parking: Free car park with 4 disabled bays next to the main entrance.
+    postcode: ZZ2 5QB
+    parking: Small car park behind the surgery with 2 disabled bays.
     accessibility:
-      - Step-free access from the car park
+      - Step-free access through the front entrance
       - Accessible toilet on the ground floor
-      - Hearing loop at reception
-      - All consulting rooms are on the ground floor
-  - name: Millbrook branch surgery
-    address:
-      - The Old School House
-      - Mill Road
-      - Millbrook
-    postcode: ZZ1 4BB
-    parking: On-street parking only.
-    accessibility:
-      - Ramp at the side entrance
       - Hearing loop at reception
 
 opening_hours:
   monday:
-    - { opens: "08:00", closes: "18:30" }
+    - { opens: "08:00", closes: "18:00" }
   tuesday:
-    - { opens: "08:00", closes: "18:30" }
+    - { opens: "08:00", closes: "18:00" }
   wednesday:
-    - { opens: "07:30", closes: "18:30" }
+    - { opens: "08:00", closes: "18:00" }
   thursday:
-    - { opens: "08:00", closes: "18:30" }
+    - { opens: "08:00", closes: "13:00" }
   friday:
-    - { opens: "08:00", closes: "18:30" }
+    - { opens: "08:00", closes: "18:00" }
   saturday: closed
   sunday: closed
   # Urgent help and "When we are closed" are added automatically. Use notes
   # for details such as branch hours or extended access.
   notes:
-    - The Millbrook branch surgery is open 8:30am to 12:30pm, Monday to Friday.
+    - >-
+      We close at 1pm on Thursdays. Call 111 if you need urgent help on
+      Thursday afternoons.
     - >-
       Evening and weekend appointments are available through our Primary Care
       Network. Ask reception or use our online form.
 
 # Days the practice is closed, such as staff training afternoons.
 closures:
-  - date: "2026-11-19"
-    from: "13:00"
-    to: "18:30"
-    reason: Staff training. Call 111 if you need urgent help while we are closed.
   - date: "2026-12-25"
     reason: Christmas Day bank holiday.
   - date: "2026-12-28"
@@ -114,12 +101,7 @@ closures:
 
 # Short messages shown at the top of the home page. They disappear after the
 # expiry date the next time the site is built.
-notices:
-  - title: Flu and COVID-19 vaccinations
-    text: >-
-      Autumn vaccination clinics are running on Saturday mornings in November.
-      Eligible patients will receive a text message invitation.
-    expires: "2026-11-30"
+notices: []
 
 online_services:
   online_consultation:
@@ -127,8 +109,8 @@ online_services:
     provider: Demo provider
     label: Contact us online
     # The link your provider gave you. It must start with https://
-    url: https://example.com/fernmoor-online-consultation
-    availability: 8am to 6:30pm, Monday to Friday
+    url: https://example.com/quillbrook-online-consultation
+    availability: 8am to 6pm, Monday to Friday
     # Optional: the embed code your provider gave you. Only paste code that
     # came from your provider. Code from unknown websites will stop the build.
     embed_html: ""
@@ -139,8 +121,7 @@ online_services:
       longer if you order before a weekend or bank holiday.
   test_results: >-
     You can see most test results in the NHS App. If a doctor needs to talk to
-    you about a result, we will contact you. Otherwise, call after 2pm and
-    reception can tell you whether your result is back.
+    you about a result, we will contact you.
 
 # Extra websites that embedded code is allowed to load from, if your
 # supplier's code uses a domain the check does not recognise. Only add a
@@ -150,74 +131,59 @@ trusted_embed_domains: []
 team:
   - group: GP partners
     people:
-      - name: Dr Amara Okafor
+      - name: Dr Helen Marsh
         role: Senior partner
-        details: Special interests in diabetes and women's health.
-      - name: Dr Tom Hughes
+      - name: Dr Kwame Asante
         role: GP partner
-        details: Training lead for GP registrars.
   - group: Salaried GPs
     people:
-      - name: Dr Priya Nair
+      - name: Dr Fiona Lennox
         role: Salaried GP
-        details: Works Monday, Tuesday and Thursday.
-      - name: Dr Seán Byrne
-        role: Salaried GP
-        details: Special interest in minor surgery.
   - group: Nursing and clinical team
     people:
-      - name: Jo Lister
-        role: Advanced nurse practitioner
-      - name: Ben Carter
+      - name: Sam Doyle
         role: Practice nurse
-      - name: Ruth Adeyemi
+      - name: Aisha Rahman
         role: Healthcare assistant
-      - name: Karim Haddad
-        role: Clinical pharmacist
   - group: Practice management
     people:
-      - name: Linda Shaw
+      - name: Gareth Pryce
         role: Practice manager
 
 services:
   - name: Long-term condition reviews
-    description: Annual reviews for asthma, COPD, diabetes, heart disease and other conditions.
+    description: Annual reviews for asthma, diabetes, heart disease and other conditions.
   - name: Childhood immunisations
-    description: Routine vaccinations for babies and children, run by our practice nurses.
-  - name: Contraception and sexual health
-    description: Contraceptive pills, injections, implants and coils.
+    description: Routine vaccinations for babies and children, run by our practice nurse.
   - name: Cervical screening
     description: We will invite you when your screening is due.
-  - name: Minor surgery
-    description: Joint injections and removal of some skin lesions.
   - name: NHS Health Checks
     description: For adults aged 40 to 74 without certain existing conditions.
 
 registration:
   catchment: >-
-    We accept new patients who live in Exampleton, Millbrook and the villages
-    of Lower Fold and Ashby Green.
+    We accept new patients who live in Quillbrook and Hatherby Cross.
   catchment_map_url: ""
 
 complaints:
-  contact: Linda Shaw, practice manager
+  contact: Gareth Pryce, practice manager
   how: >-
-    Write to us at the main surgery, email us, or ask at reception to speak to
-    the practice manager.
+    Write to us at the surgery, email us, or ask at reception to speak to the
+    practice manager.
 
 # Practices in England must publish the mean earnings of their GPs.
 # These figures are fictional.
 gp_earnings:
   financial_year: 2025/26
-  mean_earnings: 82000
+  mean_earnings: 79000
   full_time_gps: 1
-  part_time_gps: 3
-  locum_gps: 1
+  part_time_gps: 2
+  locum_gps: 0
 
 # Practices in England must show their CQC rating. Use your CQC location ID
 # (from your page on cqc.org.uk) and, if you have it, the rating widget code.
 cqc:
-  location_id: 1-000000000
+  location_id: 1-000000002
   embed_html: ""
 
 ppg:
@@ -228,7 +194,7 @@ ppg:
 
 accessibility:
   # The date the accessibility statement was first prepared.
-  statement_prepared: "2026-10-28"
+  statement_prepared: "2026-10-30"
   # Optional: anything on the site you know is not accessible.
   known_issues:
     - >-
@@ -236,13 +202,8 @@ accessibility:
       guarantee how accessible it is.
 
 news:
-  - date: "2026-10-28"
+  - date: "2026-10-30"
     title: Our new website
     text: >-
       Welcome to our new website. If you spot anything wrong or missing, please
       let us know.
-  - date: "2026-10-01"
-    title: Changes to how you contact us
-    text: >-
-      You can now use our online form for medical and admin requests between
-      8am and 6:30pm on weekdays.
