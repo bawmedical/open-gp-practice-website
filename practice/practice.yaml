@@ -106,10 +106,10 @@ notices: []
 online_services:
   online_consultation:
     # The name of the company that provides your online form.
-    provider: Demo provider
+    provider: Accurx
     label: Contact us online
     # The link your provider gave you. It must start with https://
-    url: https://example.com/quillbrook-online-consultation
+    url: https://example.com/accurx/quillbrook-surgery
     availability: 8am to 6pm, Monday to Friday
     # Optional: the embed code your provider gave you. Only paste code that
     # came from your provider. Code from unknown websites will stop the build.
